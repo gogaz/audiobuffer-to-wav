@@ -10,6 +10,7 @@ function audioBufferToWav (buffer, opt) {
   var result
   if (numChannels === 2) {
     result = interleave(buffer.getChannelData(0), buffer.getChannelData(1))
+    numChannels = 1
   } else {
     result = buffer.getChannelData(0)
   }
